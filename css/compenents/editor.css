@@ -9,8 +9,7 @@
 .editor-panel {
   height: 500px;
   width: 500px;
-  background-color: #ebeef3;
-  opacity: 0.11;
+  background-color: rgba(235, 238, 243, 0.11);
   border-radius: 20px;
 }
 .editor-img img {
@@ -21,4 +20,14 @@
   margin-block-end: 5.625rem;
 
   border-radius: 20px;
+}
+
+.editor-text input {
+  margin: 0 0.1px 8.6px 0.1px;
+  padding: 12.3px 117.6px 8.8px 125.8px;
+  border-radius: 28px;
+  box-shadow: 0.3px 5px 0 0 #bbc4d1, inset 0px 5px 0 0 #fff;
+  background-color: #ebeef3;
+  border: none;
+  outline: none;
 }

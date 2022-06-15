@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box;
-}
-
-html {
-  font-family: 'Poppins', sans-serif;
+  font-family: poppins, sans-serif;
 }
 
 body {

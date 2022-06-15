@@ -2,6 +2,10 @@
   background-color: var(--clr1);
 }
 
+.gallery-content > * {
+  margin-block-end: 1.4rem;
+}
+
 .gallery-search {
   position: relative;
 }
@@ -16,10 +20,54 @@
   border: none;
 }
 
+.gallery-search input:focus {
+  outline: none;
+  border: 2px solid var(--lg1);
+}
+
 .gallery-search i {
   position: absolute;
   top: 35%;
   right: 5%;
   font-size: 1.55rem;
   color: var(--lg1);
+}
+
+.gallery-extra {
+  margin-block-end: 2.4rem;
+}
+
+.gallery-extra .popularity-text {
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  padding: 5.8px 30.3px 6px 35.7px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--clr5);
+  margin-inline-end: 0.9rem;
+}
+
+.gallery-extra .extra-btn {
+  background-image: linear-gradient(274deg, var(--lg1), var(--lg2) 90%);
+  padding: 5.4px 21.2px 5.4px 25.3px;
+  border-radius: 1.1rem;
+  border: none;
+  color: var(--clr5);
+}
+.gallery-img {
+  column-gap: 1.9rem;
+  row-gap: 1.1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gallery-img > * {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px 0 #000;
+
+  cursor: pointer;
+}
+
+.gallery-img > *:hover {
+  border: 2px solid black;
+  transition: border 0.1s;
 }

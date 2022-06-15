@@ -24,6 +24,10 @@
   list-style-type: none;
 }
 
+.grid {
+  display: grid;
+}
+
 /* FONT AWESOME */
 
 .fa {
