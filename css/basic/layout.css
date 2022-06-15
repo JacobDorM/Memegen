@@ -1,0 +1,40 @@
+.header-layout {
+  padding-inline-start: 1.6rem;
+  padding-inline-end: 1.6rem;
+  /* padding-block-start: 1.6rem;
+  padding-block-end: 1.6rem;
+  background-color: var(--clr3); */
+}
+
+.main-layout {
+  padding-inline-start: 1.6rem;
+  padding-inline-end: 1.6rem;
+  padding-block-start: 1.6rem;
+  padding-block-end: 1.6rem;
+  margin-inline-start: 1.1rem;
+  margin-inline-end: 1.1rem;
+  margin-block-start: 1.1rem;
+  margin-block-end: 1.1rem;
+  border-radius: 20px;
+}
+
+.editor-layout {
+  background-color: #3e4b68;
+  /* display: none; */
+}
+.card-layout {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.card-layout > *:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.footer-layout {
+  min-width: 240px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 19.6875rem;
+}
