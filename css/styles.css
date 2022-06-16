@@ -10,10 +10,7 @@
 
 /* COMPONENTS */
 @import 'compenents/header.css';
-@import 'compenents/card.css';
-@import 'compenents/footer.css';
 @import 'compenents/gallery-content.css';
-@import 'compenents/screens.css';
 @import 'compenents/editor.css';
 
 /* MEDIA QUERIES */
