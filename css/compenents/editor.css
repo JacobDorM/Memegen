@@ -82,11 +82,20 @@
   background-color: #fff;
 }
 .btn-color {
-  padding-top: 2.6px;
+  padding-top: 1.5px;
 }
 
 .btn-color i {
-  padding-left: 0.4rem;
+  padding-left: 0.6rem;
+  padding-right: 0.4rem;
+}
+
+.btn-stroke {
+  margin-inline-end: 2rem;
+}
+
+.btn-color span {
+  padding-left: 0.9rem;
   padding-right: 0.4rem;
 }
 
@@ -101,6 +110,17 @@
 
 .panel-text-state > *:not(:last-child) {
   margin-inline-end: 1.4rem;
+}
+.btn-up {
+  /* display: none; */
+  box-shadow: 0.3px 5px 0 0 #706902, inset 0px 4px 0 0 rgba(255, 255, 255, 0.58);
+  background-image: linear-gradient(322deg, #cad14d 5%, #b4bb28 50%, #b4bc17 115%);
+}
+
+.btn-down {
+  /* display: none; */
+  box-shadow: 0.3px 5px 0 0 #734f0d, inset 0px 4px 0 0 rgba(255, 255, 255, 0.58);
+  background-image: linear-gradient(322deg, #b16522 5%, #b87a33 50%, #c07015 115%);
 }
 
 .btn-next {
@@ -122,9 +142,10 @@
   width: 234.9px;
   text-transform: uppercase;
   padding-left: 2rem;
+  margin-inline-end: 2rem;
 }
 
-.btn-strikethrough {
+.span-stroke {
   text-decoration: underline;
 }
 
@@ -162,9 +183,11 @@ btn-panel .style-text-down > *:not(:last-child) {
 }
 
 .panel-get > * {
-  width: 212.1px;
+  /* width: 212.1px; */
   padding-top: 0.7rem;
   padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 26.8px 18.4px 0 1.8px;
   border-radius: 15px;
   color: white;
@@ -172,12 +195,33 @@ btn-panel .style-text-down > *:not(:last-child) {
   border: none;
 }
 
-.panel-get > *:nth-of-type(1) {
+.file-input {
+  margin-inline-start: 5rem;
+  width: 70%;
+  box-shadow: 0.3px 6px 0 0 #661717, inset 0px 4px 0 0 #fff;
+  background-color: rgb(137, 61, 61);
+}
+
+.btn-share {
+  margin-inline-start: 2.3rem;
   box-shadow: 0.3px 6px 0 0 #165c9c, inset 0px 4px 0 0 #fff;
   background-color: #1e7cd3;
 }
 
-.panel-get > *:nth-of-type(2) {
+.btn-save {
+  box-shadow: 0.3px 6px 0 0 #2b239c, inset 0px 4px 0 0 #fff;
+  background-color: #3537b3;
+}
+
+.link-download {
   box-shadow: 0.3px 6px 0 0 #632687, inset 0px 4px 0 0 #fff;
   background-color: #8f44bb;
 }
+
+[list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+/* .link-download {
+  visibility: hidden;
+} */

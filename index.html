@@ -15,7 +15,8 @@
       <div class="header-container header-layout flex align-center space-between">
         <div><img class="logo" src="img/logo/LOGO.png" alt="grafity of memegen, color orange, backroung dark-gray" /></div>
         <ul class="nav-bar clean-list flex">
-          <li><a href="#" onclick="toogleGallery()">Gallery</a></li>
+          <li><a href="#" onclick="ShowGallery()">Gallery</a></li>
+          <li><a href="#" onclick="toogleSavedMemes()">Meme</a></li>
           <li><a href="#">About</a></li>
         </ul>
         <button onclick="toggleMenu(this)" class="menu-toggle">☰</button>
@@ -23,11 +24,13 @@
     </header>
     <main class="gallery-content main-layout flex direction-column">
       <div class="gallery-search">
-        <input class="search-input" type="text" name="filter-txt" oninput="onSetFilterByTxt(this.value)" placeholder="Search" />
+        <input id="key" class="search-input" list="keywords" id="keywords-choice" name="keywords-choice" oninput="onSetFilterByKeywords(this.value)" placeholder="Search" />
+        <datalist id="keywords"> </datalist>
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
       <div class="gallery-extra flex space-between">
         <div class="popularity-text" type="text" name="filter-txt" oninput="onSetFilterByTxt(this.value)" placeholder="Start typing...">Funny Animal Men Women comic smile</div>
+        <button class="extra-btn flexiable" onclick="onMemeGenerator()">I'm flexable</button>
         <button class="extra-btn">More</button>
       </div>
       <div class="gallery-img grid"></div>
@@ -40,46 +43,57 @@
           <input class="edit-text" type="text" name="filter-txt" oninput="onSetLineTxt(this.value)" placeholder="Add text to the meme" />
         </div>
         <div class="panel-text-state">
-          <button class="btn-text btn-next">&#8645;</button>
-          <button class="btn-text btn-add"><i class="fa-solid fa-plus"></i></button>
-          <button class="btn-text btn-delete"><i class="fa-solid fa-trash"></i></button>
+          <button class="btn-text btn-up" onclick="onMoveUp(-10)"><i class="fa-solid fa-arrow-up"></i></button>
+          <button class="btn-text btn-down" onclick="onMoveDown(10)"><i class="fa-solid fa-arrow-down"></i></button>
+          <button class="btn-text btn-next" onclick="onNextLine()">&#8645;</button>
+          <button class="btn-text btn-add" onclick="onAddText()"><i class="fa-solid fa-plus"></i></button>
+          <button class="btn-text btn-delete" onclick="onDeleteText()"><i class="fa-solid fa-trash"></i></button>
         </div>
         <div class="panel-style-text flex direction-column">
           <div class="style-text-upper flex space-between">
-            <button class="btn-panel"><img src="https://img.icons8.com/small/16/undefined/increase-font.png" /></button>
-            <button class="btn-panel"><img src="https://img.icons8.com/small/16/undefined/decrease-font.png" /></button>
-            <button class="btn-panel"><i class="fa-solid fa-align-left"></i></button>
-            <button class="btn-panel"><i class="fa-solid fa-align-center"></i></button>
-            <button class="btn-panel"><i class="fa-solid fa-align-right"></i></button>
+            <button class="btn-panel" onclick="onIncreaseSize()"><img src="https://img.icons8.com/small/16/undefined/increase-font.png" /></button>
+            <button class="btn-panel" onclick="onDecreaseSize()"><img src="https://img.icons8.com/small/16/undefined/decrease-font.png" /></button>
+            <button class="btn-panel" onclick="onAlignLeft('left')"><i class="fa-solid fa-align-left"></i></button>
+            <button class="btn-panel" onclick="onAlignCenter('center')"><i class="fa-solid fa-align-center"></i></button>
+            <button class="btn-panel" onclick="onAlignRight('right')"><i class="fa-solid fa-align-right"></i></button>
           </div>
           <div class="style-text-down">
-            <select class="btn-panel style-text-impact" name="" id="">
-              <option value="">Impact</option>
-              <option value=""></option>
-              <option value=""></option>
+            <select class="btn-panel style-text-impact" onchange="onSetFont(this.value)">
+              <option value="impact">Impact</option>
+              <option value="poppins">Poppins</option>
+              <option value="sans-serif">Sans-serif</option>
             </select>
-            <button class="btn-strikethrough btn-panel">S</button>
+            <label class="btn-panel btn-color btn-stroke" for="strokepicker">
+              <span class="span-stroke">S</span>
+              <input class="color-picker" oninput="onSetStrokeColor(this.value)" type="color" id="strokepicker" />
+            </label>
             <label class="btn-panel btn-color" for="colorpicker">
               <i class="fa-solid fa-palette"> </i>
               <input class="color-picker" oninput="onSetTextColor(this.value)" type="color" id="colorpicker" />
             </label>
           </div>
         </div>
-
+        <!--  make the sticker render from js from a list of stickers and make it able to select from all of them -->
         <div class="panel-sticker">
           <i class="fa-solid fa-caret-left"></i>
-          <span>😠</span>
-          <span>😆</span>
-          <span>😱</span>
-          <span>😐</span>
+          <span onclick="onSetEmojyForText(this.innerText)">😠</span>
+          <span onclick="onSetEmojyForText(this.innerText)">😆</span>
+          <span onclick="onSetEmojyForText(this.innerText)">😱</span>
+          <span onclick="onSetEmojyForText(this.innerText)">😐</span>
           <i class="fa-solid fa-caret-right"></i>
         </div>
         <div class="panel-get">
-          <button><i class="fa-solid fa-share-nodes"></i> Share</button>
-          <button><i class="fa-solid fa-download"></i> Download</button>
+          <input type="file" class="file-input" name="image" onchange="onImgInput(event)" />
+          <button class="btn-share" onclick="onUploadImg()"><i class="fa-solid fa-share-nodes"></i> Share</button>
+          <button class="btn-save" onclick="onSaveImg()"><i class="fa-solid fa-image"></i> Save</button>
+          <a class="link-download" href="#" onclick="onDownloadCanvas(this)" download="file-name"> <i class="fa-solid fa-download"></i> Download</a>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div>Dor Menachem</div>
+    </footer>
 
     <script src="js/services/storage.service.js"></script>
     <script src="js/services/util.service.js"></script>

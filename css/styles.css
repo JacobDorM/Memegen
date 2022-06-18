@@ -12,6 +12,7 @@
 @import 'compenents/header.css';
 @import 'compenents/gallery-content.css';
 @import 'compenents/editor.css';
+@import 'compenents/footer.css';
 
 /* MEDIA QUERIES */
 @import 'mq/mq.css';
