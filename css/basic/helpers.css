@@ -28,6 +28,12 @@
   display: grid;
 }
 
+.center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* FONT AWESOME */
 
 /* .fa {

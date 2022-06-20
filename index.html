@@ -29,7 +29,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
       <div class="gallery-extra flex space-between">
-        <div class="popularity-text" type="text" name="filter-txt" oninput="onSetFilterByTxt(this.value)" placeholder="Start typing...">Funny Animal Men Women comic smile</div>
+        <div class="popularity-text center-item" type="text" name="filter-txt" oninput="onSetFilterByTxt(this.value)" placeholder="Start typing...">Funny</div>
         <button class="extra-btn flexiable" onclick="onMemeGenerator()">I'm flexable</button>
         <button class="extra-btn">More</button>
       </div>
@@ -51,11 +51,11 @@
         </div>
         <div class="panel-style-text flex direction-column">
           <div class="style-text-upper flex space-between">
-            <button class="btn-panel" onclick="onIncreaseSize()"><img src="https://img.icons8.com/small/16/undefined/increase-font.png" /></button>
-            <button class="btn-panel" onclick="onDecreaseSize()"><img src="https://img.icons8.com/small/16/undefined/decrease-font.png" /></button>
-            <button class="btn-panel" onclick="onAlignLeft('left')"><i class="fa-solid fa-align-left"></i></button>
-            <button class="btn-panel" onclick="onAlignCenter('center')"><i class="fa-solid fa-align-center"></i></button>
-            <button class="btn-panel" onclick="onAlignRight('right')"><i class="fa-solid fa-align-right"></i></button>
+            <button class="btn-panel center-item" onclick="onIncreaseSize()"><img src="https://img.icons8.com/small/16/undefined/increase-font.png" /></button>
+            <button class="btn-panel center-item" onclick="onDecreaseSize()"><img src="https://img.icons8.com/small/16/undefined/decrease-font.png" /></button>
+            <button class="btn-panel center-item" onclick="onAlignLeft('left')"><i class="fa-solid fa-align-left"></i></button>
+            <button class="btn-panel center-item" onclick="onAlignCenter('center')"><i class="fa-solid fa-align-center"></i></button>
+            <button class="btn-panel center-item" onclick="onAlignRight('right')"><i class="fa-solid fa-align-right"></i></button>
           </div>
           <div class="style-text-down">
             <select class="btn-panel style-text-impact" onchange="onSetFont(this.value)">
@@ -67,7 +67,7 @@
               <span class="span-stroke">S</span>
               <input class="color-picker" oninput="onSetStrokeColor(this.value)" type="color" id="strokepicker" />
             </label>
-            <label class="btn-panel btn-color" for="colorpicker">
+            <label class="btn-panel btn-color center-item" for="colorpicker">
               <i class="fa-solid fa-palette"> </i>
               <input class="color-picker" oninput="onSetTextColor(this.value)" type="color" id="colorpicker" />
             </label>
@@ -82,11 +82,15 @@
           <span onclick="onSetEmojyForText(this.innerText)">😐</span>
           <i class="fa-solid fa-caret-right"></i>
         </div>
-        <div class="panel-get">
-          <input type="file" class="file-input" name="image" onchange="onImgInput(event)" />
-          <button class="btn-share" onclick="onUploadImg()"><i class="fa-solid fa-share-nodes"></i> Share</button>
-          <button class="btn-save" onclick="onSaveImg()"><i class="fa-solid fa-image"></i> Save</button>
-          <a class="link-download" href="#" onclick="onDownloadCanvas(this)" download="file-name"> <i class="fa-solid fa-download"></i> Download</a>
+        <div class="panel-get flex direction-column">
+          <div class="flex space-between">
+            <label for="image" class="file-input center-item"><i class="fa-solid fa-upload"></i>Upload<input id="image" type="file" name="image" onchange="onImgInput(event)" /></label>
+            <button class="btn-share center-item" onclick="onUploadImg()"><i class="fa-solid fa-share-nodes"></i> Share</button>
+          </div>
+          <div class="flex space-between">
+            <button class="btn-save center-item" onclick="onSaveImg()"><i class="fa-solid fa-image"></i> Save</button>
+            <a class="link-download center-item" href="#" onclick="onDownloadCanvas(this)" download="file-name"><i class="fa-solid fa-download"></i> <span>Download</span></a>
+          </div>
         </div>
       </div>
     </section>

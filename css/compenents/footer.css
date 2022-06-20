@@ -1,13 +1,11 @@
 footer {
-  position: absolute;
   text-align: center;
-  bottom: -infinity;
   width: 100%;
 }
 
 footer div {
   margin: auto;
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: black;
   color: white;
   font-family: sans-serif;

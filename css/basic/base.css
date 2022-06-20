@@ -4,12 +4,13 @@
 }
 
 body {
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0;
-  font-size: 1rem;
   line-height: 1.2065;
   background-image: linear-gradient(148deg, var(--lg3) 2%, var(--lg4) 98%);
 }
+
+
 
 h2 {
   font-size: 1.75em;
@@ -31,9 +32,6 @@ a:hover {
   color: var(--clr2);
 }
 
-.logo {
-  width: 302px;
-  height: 71px;
-  margin-top: 2.2rem;
-  margin-bottom: 2.2rem;
+canvas {
+  max-width: 400px;
 }
