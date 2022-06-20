@@ -114,9 +114,6 @@
   padding-right: 0.2rem;
 }
 
-/* .btn-stroke {
-} */
-
 .btn-color span {
   padding-left: 0.4rem;
   padding-right: 0.4rem;
@@ -138,13 +135,11 @@
 }
 
 .btn-up {
-  /* display: none; */
   box-shadow: 0.3px 5px 0 0 #706902, inset 0px 4px 0 0 rgba(255, 255, 255, 0.58);
   background-image: linear-gradient(322deg, #cad14d 5%, #b4bb28 50%, #b4bc17 115%);
 }
 
 .btn-down {
-  /* display: none; */
   box-shadow: 0.3px 5px 0 0 #734f0d, inset 0px 4px 0 0 rgba(255, 255, 255, 0.58);
   background-image: linear-gradient(322deg, #b16522 5%, #b87a33 50%, #c07015 115%);
 }
@@ -265,7 +260,3 @@ btn-panel .style-text-down > *:not(:last-child) {
 [list]::-webkit-calendar-picker-indicator {
   display: none !important;
 }
-
-/* .link-download {
-  visibility: hidden;
-} */

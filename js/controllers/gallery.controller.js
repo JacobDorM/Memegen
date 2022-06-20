@@ -54,16 +54,16 @@ function onSetFilterByKeywords(keyword) {
 
 function closeGallery() {
   const elMainGallery = document.querySelector('main')
-  var galleryStyle = elMainGallery.style
-  galleryStyle.display = 'none'
+  elMainGallery.classList.remove('display-block')
+  elMainGallery.classList.add('display-none')
   showEditor()
   renderGallery()
 }
 
 function ShowGallery() {
   const elMainGallery = document.querySelector('main')
-  var galleryStyle = elMainGallery.style
-  galleryStyle.display = 'block'
+  elMainGallery.classList.remove('display-none')
+  elMainGallery.classList.add('display-block')
   closeEditor()
   renderGallery()
 }

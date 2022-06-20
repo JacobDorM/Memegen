@@ -198,14 +198,18 @@ function onDownloadCanvas(elLink) {
 
 function showEditor() {
   const elSectionEditor = document.querySelector('section')
-  var editorStyle = elSectionEditor.style
-  editorStyle.display = 'block'
+  elSectionEditor.classList.remove('display-none')
+  elSectionEditor.classList.add('display-block')
+  // var editorStyle = elSectionEditor.style
+  // editorStyle.display = 'block'
 }
 
 function closeEditor() {
   const elSectionEditor = document.querySelector('section')
-  var editorStyle = elSectionEditor.style
-  editorStyle.display = 'none'
+  elSectionEditor.classList.remove('display-block')
+  elSectionEditor.classList.add('display-none')
+  // var editorStyle = elSectionEditor.style
+  // editorStyle.display = 'none'
 }
 
 function clearCanvas() {

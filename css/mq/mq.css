@@ -1,4 +1,11 @@
 /* MOBILE */
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
 
 @media screen and (min-width: 290px) {
   :root {
@@ -263,7 +270,7 @@
   }
 
   .editor {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
